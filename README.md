@@ -51,15 +51,15 @@ O Swagger poderá ser visualizado em [localhost:8080/swagger-ui.html](http://loc
 - Clonar repositório git
 - Construir o projeto:
 ```
-./mvnw clean package
+./mvnw clean install
 ```
 - Construir a imagem:
 ```
-./mvnw spring-boot:build-image
+docker build -t wkoju84/place-service .
 ```
 - Executar o container:
 ```
-docker run --name place-service -p 8080:8080  -d place-service:0.0.1-SNAPSHOT
+docker run -p 8080:8080  -d wkoju84/place-service
 ```
 
 A API poderá ser acessada em [localhost:8080](http://localhost:8080).
